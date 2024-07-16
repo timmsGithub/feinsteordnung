@@ -20,6 +20,7 @@ const Header = () => {
             <img src={ProfilePicture} alt={"FeinsteOrdnung profile"} style={imgStyle} />
         </div>
         <Text h1 className="font-big">Feinste Ordnung</Text>
+        <div >kontakt@feinsteordnung.de</div>
         <Spacer h={2}/>
     </>
 }
