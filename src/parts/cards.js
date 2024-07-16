@@ -32,7 +32,6 @@ const Cards = () => {
             N:${contact.lastName};${contact.firstName};;;
             TEL;TYPE=work,voice:${contact.phone}
             EMAIL:${contact.email}
-            PHOTO;ENCODING=b;TYPE=JPEG:${contact.photo}
             END:VCARD`;
 
         const blob = new Blob([vcard], { type: "text/vcard" });
