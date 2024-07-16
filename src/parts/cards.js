@@ -50,7 +50,7 @@ const Cards = () => {
     return <>
         <div onClick={() => getBase64Image(ProfilePicture, handleSaveContact)} className="bubble-button">
             <div style={{ display: "flex", justifyContent: "center" }}>
-                <Text>Kontakt speichern</Text>
+                <Text>Kontakt speichern1</Text>
             </div>
         </div>
         <a href="https://www.instagram.com/feinsteordnung" target="_blank" rel="noopener noreferrer" className="bubble-button">
