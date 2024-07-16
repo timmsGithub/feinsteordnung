@@ -1,38 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #2A3235;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.center-div {
+    width: 60vw; /* Default width */
+    max-width: 1000px; /* Maximum width to prevent it from getting too large */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.smallerCenter {
+    width: 15vw;
+    max-height: 15vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.font-big {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .center-div {
+        width: 80vw; /* Smaller width on tablets */
+    }
+    .smallerCenter {
+        width: 40vw;
+        max-height: 40vw;
+    }
+    .font-big {
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .center-div {
+        width: 90vw; /* Smaller width on mobile */
+    }
+    .smallerCenter {
+        width: 60vw;
+        max-height: 60vw;
+    }
+    .font-big {
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 2.5rem;
+    }
+}
+
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
 }
