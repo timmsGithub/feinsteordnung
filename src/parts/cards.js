@@ -1,5 +1,4 @@
 import { Text } from '@geist-ui/core'
-import ProfilePicture from "../assets/profilbild.png"
 import './BubbleButton.css';
 import React from 'react';
 
@@ -17,13 +16,12 @@ const Cards = () => {
         xhr.responseType = 'blob';
         xhr.send();
     };
-    const handleSaveContact = (imageBase64) => {
+    const handleSaveContact = () => {
         const contact = {
             firstName: "Tim",
             lastName: "Ordnung",
             phone: "+4916093077277",
             email: "kontakt@feinsteordnung.de",
-            photo: imageBase64
         };
 
         const vcard = `BEGIN:VCARD
@@ -32,7 +30,6 @@ const Cards = () => {
         N:${contact.lastName};${contact.firstName};;;
         TEL;TYPE=work,voice:${contact.phone}
         EMAIL:${contact.email}
-        PHOTO;ENCODING=b;TYPE=JPEG:${contact.photo.replace(/^data:image\/jpeg;base64,/, "")}
         END:VCARD`;
 
         const blob = new Blob([vcard], { type: "text/vcard" });
@@ -48,7 +45,7 @@ const Cards = () => {
 
    
     return <>
-        <div onClick={() => getBase64Image(ProfilePicture, handleSaveContact)} className="bubble-button">
+        <div onClick={() => handleSaveContact()} className="bubble-button">
             <div style={{ display: "flex", justifyContent: "center" }}>
                 <Text>Kontakt speichern1</Text>
             </div>
