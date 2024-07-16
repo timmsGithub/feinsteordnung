@@ -5,9 +5,9 @@ import React from 'react';
 
 const Cards = () => {
     const getBase64Image = (url, callback) => {
-        var xhr = new XMLHttpRequest();
+        const xhr = new XMLHttpRequest();
         xhr.onload = function () {
-            var reader = new FileReader();
+            const reader = new FileReader();
             reader.onloadend = function () {
                 callback(reader.result);
             };
@@ -27,12 +27,13 @@ const Cards = () => {
         };
 
         const vcard = `BEGIN:VCARD
-            VERSION:4.0
-            FN:${contact.firstName} ${contact.lastName}
-            N:${contact.lastName};${contact.firstName};;;
-            TEL;TYPE=work,voice:${contact.phone}
-            EMAIL:${contact.email}
-            END:VCARD`;
+        VERSION:4.0
+        FN:${contact.firstName} ${contact.lastName}
+        N:${contact.lastName};${contact.firstName};;;
+        TEL;TYPE=work,voice:${contact.phone}
+        EMAIL:${contact.email}
+        PHOTO;ENCODING=b;TYPE=JPEG:${contact.photo.replace(/^data:image\/jpeg;base64,/, "")}
+        END:VCARD`;
 
         const blob = new Blob([vcard], { type: "text/vcard" });
         const url = URL.createObjectURL(blob);
