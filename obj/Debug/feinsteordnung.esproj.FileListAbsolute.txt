@@ -1,2 +1,0 @@
-C:\Users\paddh\source\repos\feinsteordnung\obj\Debug\feinsteordnung.esproj.SuggestedBindingRedirects.cache
-C:\Users\paddh\source\repos\feinsteordnung\obj\Debug\feinsteordnung.esproj.CoreCompileInputs.cache
